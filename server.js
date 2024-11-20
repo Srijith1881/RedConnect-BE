@@ -10,7 +10,9 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://blooddonar.vercel.app", "http://localhost:5173"],
+    // origin: ["https://blooddonar.vercel.app", "http://localhost:5173"],
+    origin: ["https://red-connect-mu.vercel.app", "http://localhost:5173",
+      "https://red-connect-fe.vercel.app"],
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true,
   })
