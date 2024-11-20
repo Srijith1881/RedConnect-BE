@@ -5,6 +5,7 @@ require("dotenv").config();
 const bloodRoutes = require("./routes/blood.routes");
 const userRoute = require("./routes/user.route");
 const donarRoute = require("./routes/donar.routes")
+const emailRoute = require("./routes/email")
 const app = express();
 app.use(express.json());
 
@@ -21,6 +22,7 @@ app.use(
 app.use("/api/v1/blood", bloodRoutes);
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/donar", donarRoute);
+app.use('/api/v1/email', emailRoute);
 
 const port = process.env.PORT || 3333;
 app.listen(port, () => {
